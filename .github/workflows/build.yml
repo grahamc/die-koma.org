@@ -14,8 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@v12
-        with:
-          nix-installer-tag: v0.15.1
       - uses: DeterminateSystems/magic-nix-cache-action@v7
         timeout-minutes: 5
       - env:
@@ -34,8 +32,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@v12
-        with:
-          nix-installer-tag: v0.15.1
       - uses: DeterminateSystems/magic-nix-cache-action@v7
       - env:
           BRANCH_NAME_OR_REF: ${{ github.head_ref || github.ref }}
